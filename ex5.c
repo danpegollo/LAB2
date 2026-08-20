@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int obter_palpite() {
     int palpite;
@@ -24,7 +25,7 @@ void verificar_palpite(int palpite, int secreto) {
 }
 
 int main() {
-
+    srand(time(NULL));
     int numero_secreto = (rand() % 100) + 1;
     int palpite_usuario = obter_palpite();
     verificar_palpite(palpite_usuario, numero_secreto);
