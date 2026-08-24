@@ -10,10 +10,11 @@ int obter_palpite() {
 }
 
 void verificar_palpite(int palpite, int secreto) {
-    if (palpite < 1 || palpite > 100) {
-        printf("Valor inválido! Você digitou um número fora do intervalo de 1 a 100.\n");
-    } 
-    else if (palpite == secreto) {
+    while (palpite < 1 || palpite > 100) {
+        printf("Digite um valor válido:\n");
+        scanf("%d", &palpite);
+    }
+    if (palpite == secreto) {
         printf("Parabéns!!! Você acertou!\n");
     } 
     else if (palpite < secreto) {
